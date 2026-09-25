@@ -106,7 +106,7 @@ const LibrarySection = () => {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         placeholder="Search lifts or muscles..."
-                        className="w-full rounded-xl bg-[#14171e] border border-brand-border pl-10 pr-4 py-2.5 text-xs sm:text-sm text-white placeholder-zinc-500 focus:border-[#CCFF00] focus:outline-none focus:ring-1 focus:ring-[#CCFF00] transition"
+                        className="w-full rounded-xl bg-[#14171e] border border-brand-border pl-10 pr-4 py-2.5 text-xs sm:text-sm text-white placeholder-zinc-500 focus:border-brand-lime focus:outline-none focus:ring-1 focus:ring-brand-lime transition"
                     />
                     {searchTerm && (
                         <button
@@ -129,7 +129,7 @@ const LibrarySection = () => {
                             onClick={() => setSelectedCategory(cat)}
                             className={`shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition ${
                                 isSelected
-                                    ? 'bg-[#CCFF00] text-black shadow-sm'
+                                    ? 'bg-brand-lime text-black shadow-sm'
                                     : 'bg-[#14171e] border border-brand-border text-zinc-400 hover:text-white hover:border-[#384052]'
                             }`}
                         >
@@ -142,7 +142,7 @@ const LibrarySection = () => {
             {/* Loading Skeleton Animation */}
             {loading && (
                 <div className="flex flex-col items-center justify-center py-20">
-                    <div className="flex items-center gap-3 text-[#CCFF00] mb-4">
+                    <div className="flex items-center gap-3 text-brand-lime mb-4">
                         <Loader2 className="w-8 h-8 animate-spin" />
                     </div>
                     <p className="font-oswald text-lg font-bold uppercase tracking-wider text-zinc-300">
@@ -187,7 +187,7 @@ const LibrarySection = () => {
                             setSearchTerm('');
                             setSelectedCategory('All');
                         }}
-                        className="rounded-full bg-[#CCFF00] px-5 py-2 text-xs font-bold uppercase tracking-wider text-black hover:bg-[#a7c61e] transition"
+                        className="rounded-full bg-brand-lime px-5 py-2 text-xs font-bold uppercase tracking-wider text-black hover:bg-[#a7c61e] transition"
                     >
                         Reset Filters
                     </button>

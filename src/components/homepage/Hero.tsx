@@ -8,12 +8,12 @@ const Hero = () => {
         <section className="w-full pt-6 pb-12">
             <div className="relative overflow-hidden rounded-2xl bg-[#14171e] border border-brand-border p-8 sm:p-10 lg:p-14 shadow-2xl">
                 {/* Subtle background glow */}
-                <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#CCFF00]/5 rounded-full blur-3xl pointer-events-none" />
-
+                <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-lime/5 rounded-full blur-3xl pointer-events-none" />
+        
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Text Content */}
                     <div className="lg:col-span-7 flex flex-col items-start">
-                        <span className="text-xs font-bold uppercase tracking-widest text-[#CCFF00] mb-3">
+                        <span className="text-xs font-bold uppercase tracking-widest text-brand-lime mb-3">
                             WORKOUT LIBRARY
                         </span>
 
@@ -29,7 +29,7 @@ const Hero = () => {
 
                         <a
                             href="#library"
-                            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-[#CCFF00] px-6 py-3.5 text-xs sm:text-sm font-black uppercase tracking-wider text-black transition-all hover:bg-brand-hover hover:shadow-lg hover:shadow-[#CCFF00]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#CCFF00] active:scale-95"
+                            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-lime px-6 py-3.5 text-xs sm:text-sm font-black uppercase tracking-wider text-black transition-all hover:bg-brand-hover hover:shadow-lg hover:shadow-brand-lime/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring- brand-lime active:scale-95"
                         >
                             <span>BROWSE WORKOUTS</span>
                             <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />

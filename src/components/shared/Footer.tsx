@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
                 <Link
                     href="/"
-                    className="flex items-center gap-2 text-white hover:text-[#CCFF00] transition group focus:outline-none"
+                    className="flex items-center gap-2 text-white hover:text-brand-lime transition group focus:outline-none"
                 >
                     <div className="flex items-center justify-center w-7 h-7 rounded-md bg-[#192419] border border-[#293d22]">
                         <Image
@@ -17,7 +17,7 @@ const Footer = () => {
                             alt="FitLog Logo"
                             width={20}
                             height={20}
-                            className=" text-[#CCFF00] transition-transform group-hover:rotate-12 duration-300"
+                            className=" text-brand-lime transition-transform group-hover:rotate-12 duration-300"
                         />
                     </div>
                     <span className="font-oswald text-lg font-bold tracking-tight uppercase">

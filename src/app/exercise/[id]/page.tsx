@@ -77,7 +77,7 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
     if (loading) {
         return (
             <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 flex flex-col items-center justify-center">
-                <Loader2 className="w-10 h-10 animate-spin text-[#CCFF00] mb-4" />
+                <Loader2 className="w-10 h-10 animate-spin text-brand-lime mb-4" />
                 <p className="font-oswald text-xl uppercase tracking-wider text-zinc-300">
                     Loading workout details...
                 </p>
@@ -148,7 +148,7 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                         {workout.muscleGroups.map((tag) => (
                             <span
                                 key={tag}
-                                className="bg-[#CCFF00] text-black text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full"
+                                className="bg-brand-lime text-black text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full"
                             >
                                 {tag}
                             </span>
@@ -202,15 +202,15 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                             disabled={inPlan || isCapReached}
                             className={`flex-1 flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-xs sm:text-sm font-black uppercase tracking-wider transition shadow-lg ${
                                 inPlan
-                                    ? 'bg-[#1f281a] border border-[#3b5428] text-[#CCFF00] cursor-default'
+                                    ? 'bg-[#1f281a] border border-[#3b5428] text-brand-lime cursor-default'
                                     : isCapReached
                                       ? 'bg-[#1c1f26] border border-[#2c303c] text-zinc-500 cursor-not-allowed'
-                                      : 'bg-[#CCFF00] text-black hover:bg-brand-hover hover:shadow-[#CCFF00]/20 active:scale-98'
+                                      : 'bg-brand-lime text-black hover:bg-brand-hover hover:shadow-brand-lime/20 active:scale-98'
                             }`}
                         >
                             {inPlan ? (
                                 <>
-                                    <Check className="w-4 h-4 text-[#CCFF00]" />
+                                    <Check className="w-4 h-4 text-brand-lime" />
                                     <span>In Today&apos;s Plan</span>
                                 </>
                             ) : (
@@ -238,7 +238,7 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                         >
                             {saved ? (
                                 <>
-                                    <BookmarkCheck className="w-4 h-4 text-[#CCFF00]" />
+                                    <BookmarkCheck className="w-4 h-4 text-brand-lime" />
                                     <span>Saved</span>
                                 </>
                             ) : (

@@ -57,7 +57,7 @@ export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
                         >
                             <div className="flex items-center gap-3">
                                 {isSuccess && (
-                                    <CheckCircle2 className="w-5 h-5 text-[#CCFF00] shrink-0" />
+                                    <CheckCircle2 className="w-5 h-5 text-brand-lime shrink-0" />
                                 )}
                                 {isError && (
                                     <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />

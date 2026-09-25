@@ -26,14 +26,14 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CCFF00] rounded-lg"
+                    className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime rounded-lg"
                     aria-label="FitLog Home"
                 >
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#192419] border border-[#293d22] group-hover:border-[#CCFF00]/60 transition-colors">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#192419] border border-[#293d22] group-hover:border-brand-lime/60 transition-colors">
                     
-                        <Image src={Logo} alt="FitLog Logo" width={20} height={20} className=" text-[#CCFF00] transition-transform group-hover:rotate-12 duration-300" />
+                        <Image src={Logo} alt="FitLog Logo" width={20} height={20} className=" text-brand-lime transition-transform group-hover:rotate-12 duration-300" />
                     </div>
-                    <span className="font-oswald text-xl sm:text-2xl font-bold tracking-tight text-white uppercase group-hover:text-[#CCFF00] transition-colors">
+                    <span className="font-oswald text-xl sm:text-2xl font-bold tracking-tight text-white uppercase group-hover:text-brand-lime transition-colors">
                         FITLOG
                     </span>
                 </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
                         href="/"
                         className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
                             isWorkoutsActive
-                                ? 'bg-[#192419] text-[#CCFF00] shadow-sm border border-[#2c4021]'
+                                ? 'bg-[#192419] text-brand-lime shadow-sm border border-[#2c4021]'
                                 : 'text-zinc-400 hover:text-white hover:bg-brand-card-hover'
                         }`}
                     >
@@ -57,7 +57,7 @@ const Navbar = () => {
                         href="/my-plan"
                         className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
                             isMyPlanActive
-                                ? 'bg-[#192419] text-[#CCFF00] shadow-sm border border-[#2c4021]'
+                                ? 'bg-[#192419] text-brand-lime shadow-sm border border-[#2c4021]'
                                 : 'text-zinc-400 hover:text-white hover:bg-brand-card-hover'
                         }`}
                     >
@@ -69,13 +69,13 @@ const Navbar = () => {
                 <div className="flex items-center gap-2.5 sm:gap-4">
                     <Link
                         href="/my-plan"
-                        className="flex items-center gap-1.5 text-xs font-medium text-zinc-300 hover:text-white transition group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#CCFF00] rounded-full p-0.5"
+                        className="flex items-center gap-1.5 text-xs font-medium text-zinc-300 hover:text-white transition group focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-lime rounded-full p-0.5"
                         aria-label={`View plan with ${planCount} exercises`}
                     >
                         <span className="text-zinc-300 font-semibold group-hover:text-white">
                             Plan
                         </span>
-                        <span className="bg-[#CCFF00] text-black font-extrabold text-[11px] w-5 h-5 rounded-full flex items-center justify-center shadow-sm transition-transform group-hover:scale-105">
+                        <span className="bg-brand-lime text-black font-extrabold text-[11px] w-5 h-5 rounded-full flex items-center justify-center shadow-sm transition-transform group-hover:scale-105">
                             {planCount}
                         </span>
                     </Link>
@@ -120,13 +120,13 @@ const Navbar = () => {
                             onClick={() => setMobileMenuOpen(false)}
                             className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition ${
                                 isWorkoutsActive
-                                    ? 'bg-[#192419] text-[#CCFF00] border border-[#2c4021]'
+                                    ? 'bg-[#192419] text-brand-lime border border-[#2c4021]'
                                     : 'text-zinc-300 hover:bg-brand-card-hover'
                             }`}
                         >
                             <span>Workouts</span>
                             {isWorkoutsActive && (
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#CCFF00]" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-lime" />
                             )}
                         </Link>
                         <Link
@@ -134,13 +134,13 @@ const Navbar = () => {
                             onClick={() => setMobileMenuOpen(false)}
                             className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition ${
                                 isMyPlanActive
-                                    ? 'bg-[#192419] text-[#CCFF00] border border-[#2c4021]'
+                                    ? 'bg-[#192419] text-brand-lime border border-[#2c4021]'
                                     : 'text-zinc-300 hover:bg-brand-card-hover'
                             }`}
                         >
                             <span>My Plan</span>
                             <div className="flex items-center gap-2">
-                                <span className="bg-[#CCFF00] text-black font-extrabold text-[10px] px-1.5 py-0.5 rounded-full">
+                                <span className="bg-brand-lime text-black font-extrabold text-[10px] px-1.5 py-0.5 rounded-full">
                                     {planCount} Plan
                                 </span>
                                 <span className="border border-zinc-700 bg-[#161a22] text-zinc-300 text-[10px] px-1.5 py-0.5 rounded-full">

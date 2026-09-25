@@ -12,7 +12,7 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
     return (
         <Link
             href={`/exercise/${workout.id}`}
-            className="group flex flex-col overflow-hidden rounded-2xl bg-[#14171e] border border-brand-border hover:border-[#363e4f] hover:bg-[#181c25] transition-all duration-300 shadow-md hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CCFF00]"
+            className="group flex flex-col overflow-hidden rounded-2xl bg-[#14171e] border border-brand-border hover:border-[#363e4f] hover:bg-[#181c25] transition-all duration-300 shadow-md hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
         >
             {/* Image demonstration */}
             <div className="relative aspect-16/10 w-full overflow-hidden bg-[#181b24]">
@@ -33,7 +33,7 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
                     {workout.muscleGroups.map((tag) => (
                         <span
                             key={tag}
-                            className="bg-[#CCFF00] text-black text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full"
+                            className="bg-brand-lime text-black text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full"
                         >
                             {tag}
                         </span>
@@ -41,7 +41,7 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
                 </div>
 
                 {/* Workout Name */}
-                <h3 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-[#CCFF00] transition-colors line-clamp-1">
+                <h3 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-brand-lime transition-colors line-clamp-1">
                     {workout.name}
                 </h3>
 
