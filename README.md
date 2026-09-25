@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo & Repository
 
-- **Live Demo Reference:** [workout-library-nine.vercel.app](https://workout-library-nine.vercel.app/)
+- **Live Demo Reference:** [workout-library-nine.vercel.app](url)
 - **Built with:** Next.js (App Router), React 19, TypeScript, and Tailwind CSS.
 
 ---
