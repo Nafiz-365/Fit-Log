@@ -3,7 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Dumbbell, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import Logo from '@/assets/logo.png';
 import { useWorkout } from '@/context/WorkoutContext';
 
 const Navbar = () => {
@@ -28,7 +30,8 @@ const Navbar = () => {
                     aria-label="FitLog Home"
                 >
                     <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#192419] border border-[#293d22] group-hover:border-[#CCFF00]/60 transition-colors">
-                        <Dumbbell className="w-5 h-5 text-[#CCFF00] transition-transform group-hover:rotate-12 duration-300" />
+                    
+                        <Image src={Logo} alt="FitLog Logo" width={20} height={20} className=" text-[#CCFF00] transition-transform group-hover:rotate-12 duration-300" />
                     </div>
                     <span className="font-oswald text-xl sm:text-2xl font-bold tracking-tight text-white uppercase group-hover:text-[#CCFF00] transition-colors">
                         FITLOG

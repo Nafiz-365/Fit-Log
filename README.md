@@ -19,7 +19,7 @@
 | **Next.js (v16 App Router)**   | Fast server/client component architecture, dynamic routes (`/exercise/[id]`), and static optimization |
 | **React 19**                   | Component state management, custom contexts, and hooks                                                |
 | **TypeScript**                 | Strict type safety for API models, workouts, and context actions                                      |
-| **Tailwind CSS (v4)**          | Custom dark theme (`#0f1115`), neon lime accents (`#c4f000`), and responsive layouts                  |
+| **Tailwind CSS (v4)**          | Custom dark theme (`#0f1115`), neon lime accents (`#CCFF00`), and responsive layouts                  |
 | **Lucide React**               | Sleek, modern icons for fitness stats, navigation, and badges                                         |
 | **Next Font (Oswald & Inter)** | Bold athletic uppercase display typography paired with clean legible sans-serif                       |
 
