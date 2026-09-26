@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo & Repository
 
-- **Live Demo Reference:** [Fit-Log](url)
+- **Live Demo Reference:** [Fit-Log]('https://b14-fit-log.netlify.app/')
 - **Built with:** Next.js (App Router), React 19, TypeScript, and Tailwind CSS.
 
 ---
