@@ -23,9 +23,6 @@ const MyPlanPage = () => {
         removeFromSaved,
         toggleDone,
         isDone,
-        totalExercises,
-        totalMinutes,
-        totalCalories,
         isLoaded,
     } = useWorkout();
     const [activeTab, setActiveTab] = useState<TabType>('today');
@@ -33,6 +30,17 @@ const MyPlanPage = () => {
     const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
     // Pick list based on active tab
     const currentList = activeTab === 'today' ? todayPlan : savedPlan;
+
+    // Compute stats for the active tab's list
+    const activeExercises = currentList.length;
+    const activeMinutes = currentList.reduce(
+        (acc, w) => acc + (Number(w.duration) || 0),
+        0,
+    );
+    const activeCalories = currentList.reduce(
+        (acc, w) => acc + (Number(w.caloriesBurned) || 0),
+        0,
+    );
     // Sorted list based on chosen sort option
     const sortedWorkouts = useMemo(() => {
         const listCopy = [...currentList];
@@ -52,12 +60,12 @@ const MyPlanPage = () => {
             return 0;
         });
     }, [currentList, sortBy]);
-  
+
     const handleSortSelect = (option: SortOption) => {
         setSortBy(option);
         setSortDropdownOpen(false);
-  };
-  
+    };
+
     const sortLabelMap: Record<SortOption, string> = {
         duration: 'Duration',
         calories: 'Calories',
@@ -82,7 +90,7 @@ const MyPlanPage = () => {
                         Exercises
                     </span>
                     <div className="font-oswald text-4xl sm:text-6xl font-black text-brand-lime mt-2">
-                        {isLoaded ? totalExercises : 0}
+                        {isLoaded ? activeExercises : 0}
                     </div>
                 </div>
                 <div className="px-3 sm:px-8">
@@ -90,7 +98,7 @@ const MyPlanPage = () => {
                         Minutes
                     </span>
                     <div className="font-oswald text-4xl sm:text-6xl font-black text-white mt-2">
-                        {isLoaded ? totalMinutes : 0}
+                        {isLoaded ? activeMinutes : 0}
                     </div>
                 </div>
                 <div className="px-3 sm:px-8">
@@ -98,7 +106,7 @@ const MyPlanPage = () => {
                         Calories
                     </span>
                     <div className="font-oswald text-4xl sm:text-6xl font-black text-white mt-2">
-                        {isLoaded ? totalCalories : 0}
+                        {isLoaded ? activeCalories : 0}
                     </div>
                 </div>
             </div>

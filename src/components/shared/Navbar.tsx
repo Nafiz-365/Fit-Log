@@ -30,8 +30,13 @@ const Navbar = () => {
                     aria-label="FitLog Home"
                 >
                     <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#192419] border border-[#293d22] group-hover:border-brand-lime/60 transition-colors">
-                    
-                        <Image src={Logo} alt="FitLog Logo" width={20} height={20} className=" text-brand-lime transition-transform group-hover:rotate-12 duration-300" />
+                        <Image
+                            src={Logo}
+                            alt="FitLog Logo"
+                            width={20}
+                            height={20}
+                            className=" text-brand-lime transition-transform group-hover:rotate-12 duration-300"
+                        />
                     </div>
                     <span className="font-oswald text-xl sm:text-2xl font-bold tracking-tight text-white uppercase group-hover:text-brand-lime transition-colors">
                         FITLOG

@@ -48,7 +48,7 @@ export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
                     const isSuccess = toast.type === 'success';
                     const isError = toast.type === 'error';
                     const isWarning = toast.type === 'warning';
-                    
+
                     return (
                         <div
                             key={toast.id}
