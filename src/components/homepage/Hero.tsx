@@ -9,24 +9,20 @@ const Hero = () => {
             <div className="relative overflow-hidden rounded-2xl bg-[#14171e] border border-brand-border p-8 sm:p-10 lg:p-14 shadow-2xl">
                 {/* Subtle background glow */}
                 <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand-lime/5 rounded-full blur-3xl pointer-events-none" />
-        
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Text Content */}
                     <div className="lg:col-span-7 flex flex-col items-start">
                         <span className="text-xs font-bold uppercase tracking-widest text-brand-lime mb-3">
                             WORKOUT LIBRARY
                         </span>
-
                         <h1 className="font-oswald text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.05] max-w-xl">
                             TRAIN WITH INTENT. LOG EVERY SET.
                         </h1>
-
                         <p className="mt-4 text-sm sm:text-base text-zinc-400 leading-relaxed max-w-lg">
                             FitLog is a dark, no-nonsense gym companion: pick a
                             lift, lock it into today&apos;s plan, and watch the
                             week&apos;s work add up.
                         </p>
-
                         <a
                             href="#library"
                             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-lime px-6 py-3.5 text-xs sm:text-sm font-black uppercase tracking-wider text-black transition-all hover:bg-brand-hover hover:shadow-lg hover:shadow-brand-lime/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring- brand-lime active:scale-95"
@@ -35,7 +31,6 @@ const Hero = () => {
                             <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
                         </a>
                     </div>
-
                     {/* Hero Banner Visual */}
                     <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
                         <div className="relative w-full max-w-95 sm:max-w-110 aspect-5/4 flex items-center justify-center">

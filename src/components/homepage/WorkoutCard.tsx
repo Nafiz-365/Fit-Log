@@ -25,7 +25,6 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#14171e] via-transparent to-transparent opacity-60" />
             </div>
-
             {/* Card Content */}
             <div className="flex flex-1 flex-col p-5">
                 {/* Muscle Group Tags */}
@@ -39,29 +38,24 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
                         </span>
                     ))}
                 </div>
-
                 {/* Workout Name */}
                 <h3 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-brand-lime transition-colors line-clamp-1">
                     {workout.name}
                 </h3>
-
                 {/* Equipment Line */}
                 <p className="text-xs text-zinc-400 mt-1 line-clamp-1">
                     {workout.equipment}
                 </p>
-
                 {/* Stats Row */}
                 <div className="mt-4 pt-3 border-t border-brand-border flex items-center justify-between text-xs text-zinc-300 font-medium">
                     <div className="flex items-center gap-1.5 text-zinc-300">
                         <Clock className="w-3.5 h-3.5 text-zinc-400" />
                         <span>{workout.duration} min</span>
                     </div>
-
                     <div className="flex items-center gap-1.5 text-zinc-300">
                         <Flame className="w-3.5 h-3.5 text-zinc-400" />
                         <span>{workout.caloriesBurned} kcal</span>
                     </div>
-
                     <div className="flex items-center gap-1.5 text-zinc-300">
                         <Star className="w-3.5 h-3.5 text-zinc-400 fill-zinc-400" />
                         <span>{workout.rating}</span>

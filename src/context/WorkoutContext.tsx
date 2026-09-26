@@ -45,7 +45,6 @@ export const WorkoutProvider = ({
     const [savedPlan, setSavedPlan] = useState<Workout[]>([]);
     const [completedIds, setCompletedIds] = useState<number[]>([]);
     const [isLoaded, setIsLoaded] = useState(false);
-
     const { showToast } = useToast();
 
     // Load from localStorage on client mount asynchronously

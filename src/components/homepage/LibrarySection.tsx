@@ -97,7 +97,6 @@ const LibrarySection = () => {
                         Twelve lifts covering every major muscle group.
                     </p>
                 </div>
-
                 {/* Search Input */}
                 <div className="relative w-full md:w-72">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
@@ -118,7 +117,6 @@ const LibrarySection = () => {
                     )}
                 </div>
             </div>
-
             {/* Category Pills */}
             <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
                 {CATEGORIES.map((cat) => {
@@ -138,7 +136,6 @@ const LibrarySection = () => {
                     );
                 })}
             </div>
-
             {/* Loading Skeleton Animation */}
             {loading && (
                 <div className="flex flex-col items-center justify-center py-20">
@@ -171,7 +168,6 @@ const LibrarySection = () => {
                     </div>
                 </div>
             )}
-
             {/* Empty Search Result */}
             {!loading && filteredWorkouts.length === 0 && (
                 <div className="rounded-2xl border border-dashed border-[#2b3140] bg-[#12151b] p-12 text-center my-6">
@@ -193,7 +189,6 @@ const LibrarySection = () => {
                     </button>
                 </div>
             )}
-
             {/* Grid of Workout Cards */}
             {!loading && filteredWorkouts.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

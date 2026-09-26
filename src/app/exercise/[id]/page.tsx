@@ -23,11 +23,9 @@ interface ExercisePageProps {
 const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
     const resolvedParams = use(params);
     const exerciseId = Number(resolvedParams.id);
-
     const [workout, setWorkout] = useState<Workout | null>(null);
     const [loading, setLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
-
     const { addToTodayPlan, addToSaved, isInTodayPlan, isSaved, todayPlan } =
         useWorkout();
 
@@ -55,7 +53,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                     err,
                 );
             }
-
             // Fallback
             const fallback = fallbackWorkouts.find((w) => w.id === exerciseId);
             if (isMounted) {
@@ -67,7 +64,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                 setLoading(false);
             }
         };
-
         loadWorkout();
         return () => {
             isMounted = false;
@@ -92,7 +88,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
     const inPlan = isInTodayPlan(workout.id);
     const saved = isSaved(workout.id);
     const isCapReached = todayPlan.length >= 5 && !inPlan;
-
     const keySpecs = [
         { label: 'EQUIPMENT', value: workout.equipment },
         { label: 'DIFFICULTY', value: workout.difficulty },
@@ -113,7 +108,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                 <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                 <span>Back to Workouts</span>
             </Link>
-
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 {/* Left Side — Visual Media */}
@@ -130,19 +124,16 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                         <div className="absolute inset-0 bg-linear-to-t from-brand-bg/80 via-transparent to-transparent opacity-40" />
                     </div>
                 </div>
-
                 {/* Right Side — Details */}
                 <div className="lg:col-span-6 flex flex-col">
                     {/* Title */}
                     <h1 className="font-oswald text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white leading-none">
                         {workout.name}
                     </h1>
-
                     {/* Description */}
                     <p className="mt-3 text-sm sm:text-base text-zinc-300 leading-relaxed">
                         {workout.description}
                     </p>
-
                     {/* Category Tags */}
                     <div className="flex flex-wrap gap-2 mt-4">
                         {workout.muscleGroups.map((tag) => (
@@ -154,7 +145,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                             </span>
                         ))}
                     </div>
-
                     {/* Key Specs Table Panel */}
                     <div className="mt-8 rounded-2xl bg-[#14171e] border border-brand-border divide-y divide-brand-border overflow-hidden shadow-lg">
                         {keySpecs.map((spec) => (
@@ -171,13 +161,11 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                             </div>
                         ))}
                     </div>
-
                     {/* Instructions Section */}
                     <div className="mt-8">
                         <h2 className="font-oswald text-xl font-extrabold uppercase tracking-tight text-white mb-4">
                             INSTRUCTIONS
                         </h2>
-
                         <ol className="space-y-3">
                             {workout.instructions.map((step, idx) => (
                                 <li
@@ -192,7 +180,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                             ))}
                         </ol>
                     </div>
-
                     {/* CTA Buttons */}
                     <div className="mt-10 flex flex-col sm:flex-row gap-3">
                         {/* Add to today's plan button */}
@@ -224,7 +211,6 @@ const ExerciseDetailPage = ({ params }: ExercisePageProps) => {
                                 </>
                             )}
                         </button>
-
                         {/* Save for later button */}
                         <button
                             type="button"

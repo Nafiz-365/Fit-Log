@@ -28,14 +28,11 @@ const MyPlanPage = () => {
         totalCalories,
         isLoaded,
     } = useWorkout();
-
     const [activeTab, setActiveTab] = useState<TabType>('today');
     const [sortBy, setSortBy] = useState<SortOption>('duration');
     const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
-
     // Pick list based on active tab
     const currentList = activeTab === 'today' ? todayPlan : savedPlan;
-
     // Sorted list based on chosen sort option
     const sortedWorkouts = useMemo(() => {
         const listCopy = [...currentList];
@@ -55,12 +52,12 @@ const MyPlanPage = () => {
             return 0;
         });
     }, [currentList, sortBy]);
-
+  
     const handleSortSelect = (option: SortOption) => {
         setSortBy(option);
         setSortDropdownOpen(false);
-    };
-
+  };
+  
     const sortLabelMap: Record<SortOption, string> = {
         duration: 'Duration',
         calories: 'Calories',
@@ -78,7 +75,6 @@ const MyPlanPage = () => {
                     Cap of five lifts for today. Finish them, then load more.
                 </p>
             </div>
-
             {/* Metrics Summary Row (3 stat cards) */}
             <div className="mt-8 grid grid-cols-3 rounded-2xl bg-[#14171e] border border-brand-border divide-x divide-brand-border p-6 sm:p-8 shadow-xl">
                 <div className="px-2 sm:px-4">
@@ -89,7 +85,6 @@ const MyPlanPage = () => {
                         {isLoaded ? totalExercises : 0}
                     </div>
                 </div>
-
                 <div className="px-3 sm:px-8">
                     <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">
                         Minutes
@@ -98,7 +93,6 @@ const MyPlanPage = () => {
                         {isLoaded ? totalMinutes : 0}
                     </div>
                 </div>
-
                 <div className="px-3 sm:px-8">
                     <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">
                         Calories
@@ -108,7 +102,6 @@ const MyPlanPage = () => {
                     </div>
                 </div>
             </div>
-
             {/* Controls Bar: Tabs on Left, Sort Dropdown on Right */}
             <div className="mt-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 {/* Tabs Switcher */}
@@ -136,7 +129,6 @@ const MyPlanPage = () => {
                         Saved
                     </button>
                 </div>
-
                 {/* Sort Dropdown */}
                 <div className="relative flex items-center gap-2 self-end sm:self-auto">
                     <span className="text-xs font-semibold text-zinc-400">
@@ -157,7 +149,6 @@ const MyPlanPage = () => {
                                 }`}
                             />
                         </button>
-
                         {sortDropdownOpen && (
                             <div
                                 className="absolute right-0 top-full mt-2 w-36 rounded-xl bg-[#171b24] border border-[#282e3c] py-1.5 shadow-2xl z-30 animate-in fade-in zoom-in-95 duration-150"
@@ -191,7 +182,6 @@ const MyPlanPage = () => {
                     </div>
                 </div>
             </div>
-
             {/* Loading State */}
             {!isLoaded ? (
                 <div className="py-20 text-center flex flex-col items-center justify-center">
@@ -221,7 +211,6 @@ const MyPlanPage = () => {
                 <div className="mt-6 space-y-4">
                     {sortedWorkouts.map((workout: Workout) => {
                         const completed = isDone(workout.id);
-
                         return (
                             <div
                                 key={workout.id}
@@ -250,7 +239,6 @@ const MyPlanPage = () => {
                                             </div>
                                         )}
                                     </div>
-
                                     <div className="min-w-0 flex-1">
                                         <h3
                                             className={`font-oswald text-lg sm:text-xl font-bold uppercase tracking-tight truncate transition-colors ${
@@ -261,11 +249,9 @@ const MyPlanPage = () => {
                                         >
                                             {workout.name}
                                         </h3>
-
                                         <p className="text-xs text-zinc-400 mt-0.5 truncate">
                                             {workout.equipment}
                                         </p>
-
                                         <div className="mt-3 flex items-center gap-4 text-xs font-medium text-zinc-300">
                                             <div className="flex items-center gap-1 text-zinc-300">
                                                 <Clock className="w-3.5 h-3.5 text-zinc-400" />
@@ -273,7 +259,6 @@ const MyPlanPage = () => {
                                                     {workout.duration} min
                                                 </span>
                                             </div>
-
                                             <div className="flex items-center gap-1 text-zinc-300">
                                                 <Flame className="w-3.5 h-3.5 text-zinc-400" />
                                                 <span>
@@ -281,7 +266,6 @@ const MyPlanPage = () => {
                                                     kcal
                                                 </span>
                                             </div>
-
                                             <div className="flex items-center gap-1 text-zinc-300">
                                                 <Star className="w-3.5 h-3.5 text-zinc-400 fill-zinc-400" />
                                                 <span>{workout.rating}</span>
@@ -289,7 +273,6 @@ const MyPlanPage = () => {
                                         </div>
                                     </div>
                                 </div>
-
                                 {/* Right section: Action Buttons */}
                                 <div className="flex items-center justify-end gap-2.5 sm:gap-3 self-end sm:self-auto shrink-0 pt-2 sm:pt-0 border-t sm:border-0 border-brand-border w-full sm:w-auto">
                                     {/* View Details button */}
@@ -299,7 +282,6 @@ const MyPlanPage = () => {
                                     >
                                         View Details
                                     </Link>
-
                                     {/* Mark as Done button (Only in Today's Plan) */}
                                     {activeTab === 'today' && (
                                         <button
@@ -321,7 +303,6 @@ const MyPlanPage = () => {
                                             </span>
                                         </button>
                                     )}
-
                                     {/* Remove button */}
                                     <button
                                         type="button"

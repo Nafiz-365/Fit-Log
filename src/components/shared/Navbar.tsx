@@ -37,7 +37,6 @@ const Navbar = () => {
                         FITLOG
                     </span>
                 </Link>
-
                 {/* Desktop Navigation Links */}
                 <nav
                     className="hidden md:flex items-center gap-1.5 bg-[#14171e] p-1 rounded-full border border-brand-border shadow-sm"
@@ -64,7 +63,6 @@ const Navbar = () => {
                         My Plan
                     </Link>
                 </nav>
-
                 {/* Right Status Badges & Mobile Toggle */}
                 <div className="flex items-center gap-2.5 sm:gap-4">
                     <Link
@@ -79,7 +77,6 @@ const Navbar = () => {
                             {planCount}
                         </span>
                     </Link>
-
                     <Link
                         href="/my-plan"
                         prefetch={true}
@@ -93,7 +90,6 @@ const Navbar = () => {
                             {savedCount}
                         </span>
                     </Link>
-
                     {/* Mobile Menu Button */}
                     <button
                         type="button"
@@ -110,7 +106,6 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-
             {/* Mobile Dropdown Menu */}
             {mobileMenuOpen && (
                 <div className="md:hidden border-t border-brand-border bg-[#12151b] px-4 py-3 animate-in slide-in-from-top-2 duration-200">

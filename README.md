@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo & Repository
 
-- **Live Demo Reference:** [workout-library-nine.vercel.app](url)
+- **Live Demo Reference:** [Fit-Log](url)
 - **Built with:** Next.js (App Router), React 19, TypeScript, and Tailwind CSS.
 
 ---
@@ -123,23 +123,6 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 npm run build
 npm start
 ```
-
----
-
-## 📝 Git Commit History
-
-The project follows semantic commit conventions with clear, atomic commits:
-
-1. `setup: add fonts, theme styling, types, workout context and toast system`
-2. `feat(navbar): add responsive navbar with brand logo, active route highlighting and live counters`
-3. `feat(footer): add footer with brand logo and copyright statement`
-4. `feat(hero): add hero banner with typography, CTA scroll button and 3D illustration`
-5. `feat(library): add workout card, library section with API fetching, skeleton loader and search filters`
-6. `feat(details): add two-column workout detail page with specs table, instructions, and interactive plan/save actions`
-7. `feat(plan): add my plan page with live metrics, today/saved tabs, sort dropdown, and mark as done`
-8. `feat(404): add responsive custom 404 not found page with navigation back to workouts`
-9. `feat(loading): add root route loading animation for smooth transitions`
-10. `docs: add comprehensive README with architecture, feature documentation and setup guide`
 
 ---
 
